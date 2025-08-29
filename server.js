@@ -20,6 +20,9 @@ function alternatingCapsReverse(str) {
 }
 
 // POST /bfhl
+app.get("/", (req, res) => {
+  res.json({ status: "API is running ✅" });
+});
 app.post("/bfhl", (req, res) => {
   try {
     const inputData = req.body.data;
@@ -85,3 +88,4 @@ app.post("/bfhl", (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Server running at http://localhost:${PORT}`);
 });
+
